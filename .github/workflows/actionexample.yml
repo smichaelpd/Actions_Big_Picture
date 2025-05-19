@@ -1,0 +1,16 @@
+name: example
+on: 
+  pull_request:
+    branches: main
+  workflow_dispatch:
+    
+jobs:
+  DoAThing:
+    name: Do A thing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use an action to checkout
+        uses: actions/checkout@v4
+      - name: run a command line script
+        run: ls
+      
